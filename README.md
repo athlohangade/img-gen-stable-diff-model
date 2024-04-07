@@ -24,3 +24,16 @@ Though we directly use the models from the library, there are some important con
 The overall idea of stable diffusion or [latent diffusion](https://arxiv.org/abs/2112.10752) is the image generating model operates on latent space representation of image rather than pixel space to lower the computation cost.
 The latent representation is generated from the actual image with the help of an encoder. The latent space of image is then diffused to get noisy version of the image. Then this noisy image is passed through denoising component (UNet) conditioned with textual embeddings of the prompt using cross attention to get next form of input. The denoising is done iteratively to remove the noise gradually so the model learns the process of reverse diffusion. Finally, the previous output is further passed through decoder to generate the image.
 During inference, the noise which is passed to UNet is coupled with the text prompt encoding which acts as a guide for the model to generate image.
+
+
+## Examples
+
+Some example images generated from the model
+
+![Img1](images/img1.png)
+
+![Img2](images/img2.png)
+
+![Img3](images/img3.png)
+
+![Img4](images/img4.png)
