@@ -2,7 +2,7 @@
 
 This project is simple demonstration of Image Generation using Stable Diffusion model built by Stability AI.
 
-The project uses two models from the `diffusers` library *stable-diffusion-xl-base-1.0* and *stable-diffusion-xl-refiner-1.0* to generate images. These models are developed by [Stability AI](https://stability.ai/). The base model can be used as a solo module without refiner model.
+The project uses two open-sourced models from the `diffusers` library *stable-diffusion-xl-base-1.0* and *stable-diffusion-xl-refiner-1.0* to generate images. These models are developed by [Stability AI](https://stability.ai/). The base model can be used as a solo module without refiner model.
 
 ## Usage 
 
@@ -16,9 +16,9 @@ Though we directly use the models from the library, there are some important con
 
 2) **Diffusion models**: Diffusion models takes the training data, add some noise to distort or corrupt the image and then reverse the process (denoising or reverse diffusion) to generate the image back and thus learning to recover the image from random noise.
 
-3) **[U-Net](https://arxiv.org/abs/1505.04597)**: This is a popular architecture in which encoding layers perform convolutional operations on an image to extract relevant features and the decoder layers augmented with actual image connections  upsample encoded feature and generate the segmentation map which can be used for further study or derive conclusions related to the image.
+3) **[U-Net](https://arxiv.org/abs/1505.04597)**: This is a popular architecture in which encoding layers perform convolutional operations on an image to extract relevant features and the decoder layers augmented with actual image connections upsample encoded features and generate the segmentation map which can be used for further study or derive conclusions related to the image.
 
-4) **[Cross attention mechanism](https://arxiv.org/abs/1706.03762)**: This was introduced as part of Transformers architecture where an output sequence is generated from two different input sequences based on the attention scores between the two inputs.
+4) **Cross attention mechanism**: This was introduced as part of [Transformers](https://arxiv.org/abs/1706.03762) architecture where an output sequence is generated from two different input sequences based on the attention scores between the two inputs.
 
 #### Idea
 The overall idea of stable diffusion or [latent diffusion](https://arxiv.org/abs/2112.10752) is the image generating model operates on latent space representation of image rather than pixel space to lower the computation cost.
@@ -28,7 +28,7 @@ During inference, the noise which is passed to UNet is coupled with the text pro
 
 ## Examples
 
-Some example images generated from the model
+Some example images generated from the model:
 
 ![Img1](images/img1.png)
 
